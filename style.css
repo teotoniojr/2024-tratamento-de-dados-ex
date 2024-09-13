@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --rosa-fraco: #e8d6cbff;
+    --rosa-forte: #d0ada7ff;
+    --vermelho: #ad6a6cff;
+    --violeta: #5d2e46ff;
+    --preto: #000000;
+    --fonte-texto: "Merriweather", serif;
+    --fonte-titulo: "Fascinate Inline", system-ui;
+}
+
+body{
+    font-family: var(--fonte-texto);
+    background-color: var(--violeta);
+    color: var(--preto);
+    height: 100vh;
+}
+
+header {
+    background-color: var(--rosa-fraco);
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    color: var(--preto);
+    padding: 1.2rem 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+nav a {
+    text-decoration: none;
+    color: var(--violeta);
+    margin: 0 2rem 1rem 0;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    transform: scale(0.90);
+    transition: transform 0.3s;
+}
+
+.graficos-container{
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 24px;
+    background-color: var(--vermelho);
+    border: 10px double var(--rosa-fraco);
+}
+
+.graficos-container__texto{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+span{
+    font-family: var(--fonte-titulo);
+    font-size: 2.2rem;
+    color: var(--rosa-forte);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rosa-forte);
+    color: var(--violeta);
+    width: 100%;
+    height: 3rem;
+    margin-top: 2rem;
+}
