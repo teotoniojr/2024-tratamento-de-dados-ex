@@ -1,3 +1,5 @@
+import { pegarCSS } from "./comum.js"
+
 async function docesPorRegiao() {
     const url = 'https://raw.githubusercontent.com/teotoniosjr/2024-API-Doces-do-Brasil-ex/main/doces-por-regiao.json'
     const res = await fetch(url)
@@ -14,20 +16,27 @@ async function docesPorRegiao() {
 
     console.log(nomeRegiao[0])
 
+    const ultimateColors = ['rgb(56, 75, 126)', 'rgb(18, 36, 37)', 'rgb(34, 53, 101)', 'rgb(36, 55, 57)', 'rgb(6, 4, 4)']
+
 
     console.log(votos)
     const data = [
         {
             labels: doces,
             values: votos,
-            type: 'pie'
+            type: 'pie',
+            marker: {
+                colors: ultimateColors
+            }
         }
     ]
 
     const layout =
     {
         height: 300,
-        width: 870,
+        width: 600,
+        plot_bgcolor: pegarCSS('--vermelho'),
+        paper_bgcolor: pegarCSS('--rosa-forte')
     }
 
     const regiaoTitulo = document.createElement('h3')
