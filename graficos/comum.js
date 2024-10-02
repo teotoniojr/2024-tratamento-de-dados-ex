@@ -19,10 +19,18 @@ const criarGraficoRedondo = (nomeRegiao, data, layout) => {
     document.getElementById('graficos-container').appendChild(regiaoTitulo)
     document.getElementById('graficos-container').appendChild(grafico)
     const config = {
-        reponsive: true,
-        displayModeBar: false,
+        responsive: true,
+        displayModeBar: false
     }
     Plotly.newPlot(grafico, data, layout, config)
 }
 
-export{pegarCSS, configTick, criarGraficoRedondo}
+function incluirTexto(texto){
+    const container = document.getElementById('graficos-container')
+    const paragrafo = document.createElement('p')
+    paragrafo.classList.add('graficos-container__texto')
+    paragrafo.innerHTML = texto
+    container.appendChild(paragrafo)
+}
+
+export{pegarCSS, configTick, criarGraficoRedondo, incluirTexto}

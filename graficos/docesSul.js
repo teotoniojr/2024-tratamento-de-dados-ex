@@ -1,4 +1,4 @@
-import {pegarCSS, criarGraficoRedondo} from './comum.js'
+import {pegarCSS, criarGraficoRedondo, incluirTexto} from './comum.js'
 
 async function docesSul() {
     const url = 'https://raw.githubusercontent.com/teotoniosjr/2024-API-Doces-do-Brasil-ex/main/doces-por-regiao.json'
@@ -39,6 +39,8 @@ async function docesSul() {
     }
     
     criarGraficoRedondo(nomeRegiaoSul, data, layout)
+
+    incluirTexto(`O doce mais consumido no Sul do pais é diferente que no norte. Para o <span>${nomeRegiaoSul}</span> o doce mais consumido é <span>${nomeDoces[0]}</span>, seguido por <span>${nomeDoces[1]}</span>, o mesmo da região <span>Norte</span>.`)
     
     }
 
